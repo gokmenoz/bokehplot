@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.15.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+    </head>
+    <body>
+    <form method="post" action="">
+
+        <h1>
+
+        Bike Traffic Plots
+        </h1>
+
+        <br>
+
+        Please select an option
+        <br><br>
+
+        <select id="userinfoform" name="userinfoform">
+
+        <option>All</option>
+
+        <option>Jan</option>
+
+        <option>Feb</option>
+
+        <option>Mar</option>
+        <option>Apr</option>
+        <option>May</option>
+        <option>Jun</option>
+        <option>Jul</option>
+        <option selected>Aug</option>
+        <option>Sep</option>
+        <option>Oct</option>
+        <option>Nov</option>
+        <option>Dec</option>
+        </select>
+
+        <p>
+
+          <input type='submit' name="price" value='Show' />
+
+        </p>
+
+      </form>
+
+      <br>
+    Please hover over the circles in order to see what time slot they represent. The busiest hours are usually 17,18,8,9 which are known as rush hours. As number of trips increases trip durations become longer supporting our hypothesis that trip durations differ with respect to a set of parameters one of which is the time trip is made.
+    <br>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="22fcdfb8-cbfa-484c-8a54-bd7622080d85"></div>
+        </div>
+        
+        <script type="application/json" id="b60559ba-614a-487a-8339-7446332ce2a7">
+          {"ee20286f-68f2-4058-b474-f8d04e0cd71d":{"roots":{"references":[{"attributes":{"data":null,"x":[1809,164510],"y":[5,50]},"id":"a75b7779-d75c-4f32-bdbb-2386a0da4f78","type":"LinearInterpolator"},{"attributes":{"label":{"field":"hours"},"renderers":[{"id":"567dc07c-f862-46cf-99d7-8817c8d08dc0","type":"GlyphRenderer"}]},"id":"f3f938ba-53d1-43b9-aa77-864268d8d25e","type":"LegendItem"},{"attributes":{},"id":"b26b2144-d301-4c5c-9299-748303b726bc","type":"BasicTickFormatter"},{"attributes":{"glyph_width":10,"items":[{"id":"f3f938ba-53d1-43b9-aa77-864268d8d25e","type":"LegendItem"}],"label_width":5,"location":[-20,0],"orientation":"horizontal","plot":{"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"}},"id":"540ec973-328e-477a-a8b7-817c3121fca9","type":"Legend"},{"attributes":{"source":{"id":"56b50b3b-00f7-4ce2-8268-e37a3619c728","type":"ColumnDataSource"}},"id":"5eeb0abe-c6e0-4388-99cb-d2eebd14beec","type":"CDSView"},{"attributes":{"below":[{"id":"82c59010-4d58-415b-9df4-083d37a60e4c","type":"LinearAxis"},{"id":"540ec973-328e-477a-a8b7-817c3121fca9","type":"Legend"}],"left":[{"id":"c91f646b-8915-4508-9040-52863a09a0af","type":"LinearAxis"}],"plot_height":500,"plot_width":800,"renderers":[{"id":"82c59010-4d58-415b-9df4-083d37a60e4c","type":"LinearAxis"},{"id":"6748083e-26e5-4ec3-b66b-ac144366bdce","type":"Grid"},{"id":"c91f646b-8915-4508-9040-52863a09a0af","type":"LinearAxis"},{"id":"e0135d66-d0ad-4b94-ab60-55a547343a7d","type":"Grid"},{"id":"540ec973-328e-477a-a8b7-817c3121fca9","type":"Legend"},{"id":"567dc07c-f862-46cf-99d7-8817c8d08dc0","type":"GlyphRenderer"}],"title":{"id":"c0d26ddf-f3cb-4fa0-b352-9fb02a2a705a","type":"Title"},"toolbar":{"id":"614debcd-2440-4b28-bb8c-93e0602ff4c1","type":"Toolbar"},"x_range":{"id":"74cdb2ac-1513-442e-88f7-acb4956b1bdf","type":"DataRange1d"},"x_scale":{"id":"660ca169-2ecb-450b-9ef9-e9b7cc4feefb","type":"LinearScale"},"y_range":{"id":"0ed27d94-8942-4da7-86c2-7c168dc7c2be","type":"DataRange1d"},"y_scale":{"id":"cc5cead5-8da1-402e-9957-3ec241ea54e4","type":"LinearScale"}},"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"05d0eec4-4fd8-4b3e-a13a-e45a89661ffa","type":"BasicTickFormatter"},{"attributes":{"callback":null,"tooltips":"@hours"},"id":"c25448e5-422c-404b-9647-d3c01219f58e","type":"HoverTool"},{"attributes":{},"id":"cc5cead5-8da1-402e-9957-3ec241ea54e4","type":"LinearScale"},{"attributes":{"callback":null},"id":"74cdb2ac-1513-442e-88f7-acb4956b1bdf","type":"DataRange1d"},{"attributes":{"data_source":{"id":"56b50b3b-00f7-4ce2-8268-e37a3619c728","type":"ColumnDataSource"},"glyph":{"id":"b919f12f-9403-4109-bd28-f39d6f4b1c74","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"25a45ab1-35f0-469f-9c12-4ad93e538a03","type":"Circle"},"selection_glyph":null,"view":{"id":"5eeb0abe-c6e0-4388-99cb-d2eebd14beec","type":"CDSView"}},"id":"567dc07c-f862-46cf-99d7-8817c8d08dc0","type":"GlyphRenderer"},{"attributes":{"factors":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"],"palette":["#440154","#471163","#482071","#462D7C","#433B83","#3E4888","#39548B","#345F8D","#2F6A8D","#2A758E","#267F8E","#22898D","#1F958B","#1E9F88","#23A982","#2FB37B","#40BD72","#55C666","#6DCE58","#88D547","#A5DA35","#C2DF22","#DFE318","#FDE724"]},"id":"b373a78f-dc61-40e9-9f07-7d03a23b5e29","type":"CategoricalColorMapper"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"c25448e5-422c-404b-9647-d3c01219f58e","type":"HoverTool"}]},"id":"614debcd-2440-4b28-bb8c-93e0602ff4c1","type":"Toolbar"},{"attributes":{"plot":null,"text":"August Bike Traffic by Hours"},"id":"c0d26ddf-f3cb-4fa0-b352-9fb02a2a705a","type":"Title"},{"attributes":{},"id":"660ca169-2ecb-450b-9ef9-e9b7cc4feefb","type":"LinearScale"},{"attributes":{"callback":null},"id":"0ed27d94-8942-4da7-86c2-7c168dc7c2be","type":"DataRange1d"},{"attributes":{"callback":null,"column_names":["x","y","hours"],"data":{"hours":["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23"],"x":[9187,5404,3214,1809,2203,11484,42180,91646,112904,57761,45125,55324,64707,61743,57919,69254,115107,164510,118011,81539,53241,37834,26774,15823],"y":[11.615951888538154,11.588530101159602,11.494772868699435,11.458033904551325,11.116137085792111,10.870580808080788,10.907692034139435,11.213815660257952,11.370339255768995,11.481673909154319,11.979357710064546,11.802305208107411,11.747966474518247,11.886291293479944,12.298049574981153,12.293568121215703,12.223798002438421,12.565047514842208,12.500762499541198,12.464602214891018,12.270807272590627,12.196841024827801,12.254425313114723,11.960624828835602]},"selected":null,"selection_policy":null},"id":"56b50b3b-00f7-4ce2-8268-e37a3619c728","type":"ColumnDataSource"},{"attributes":{"axis_label":"Number of Trips","formatter":{"id":"05d0eec4-4fd8-4b3e-a13a-e45a89661ffa","type":"BasicTickFormatter"},"plot":{"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"},"ticker":{"id":"8f2430c3-53bd-4f1b-9510-1193d47e65a0","type":"BasicTicker"}},"id":"82c59010-4d58-415b-9df4-083d37a60e4c","type":"LinearAxis"},{"attributes":{"axis_label":"Duration","formatter":{"id":"b26b2144-d301-4c5c-9299-748303b726bc","type":"BasicTickFormatter"},"plot":{"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"},"ticker":{"id":"99b6748b-f7de-4026-b05e-6c2e8ccb20ee","type":"BasicTicker"}},"id":"c91f646b-8915-4508-9040-52863a09a0af","type":"LinearAxis"},{"attributes":{"plot":{"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"},"ticker":{"id":"8f2430c3-53bd-4f1b-9510-1193d47e65a0","type":"BasicTicker"}},"id":"6748083e-26e5-4ec3-b66b-ac144366bdce","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.6},"fill_color":{"field":"hours","transform":{"id":"b373a78f-dc61-40e9-9f07-7d03a23b5e29","type":"CategoricalColorMapper"}},"line_color":{"value":"#1f77b4"},"size":{"field":"x","transform":{"id":"a75b7779-d75c-4f32-bdbb-2386a0da4f78","type":"LinearInterpolator"},"units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"b919f12f-9403-4109-bd28-f39d6f4b1c74","type":"Circle"},{"attributes":{},"id":"8f2430c3-53bd-4f1b-9510-1193d47e65a0","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"5dd399e8-eb3a-4158-969c-1f5927210a17","subtype":"Figure","type":"Plot"},"ticker":{"id":"99b6748b-f7de-4026-b05e-6c2e8ccb20ee","type":"BasicTicker"}},"id":"e0135d66-d0ad-4b94-ab60-55a547343a7d","type":"Grid"},{"attributes":{},"id":"99b6748b-f7de-4026-b05e-6c2e8ccb20ee","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"field":"x","transform":{"id":"a75b7779-d75c-4f32-bdbb-2386a0da4f78","type":"LinearInterpolator"},"units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"25a45ab1-35f0-469f-9c12-4ad93e538a03","type":"Circle"}],"root_ids":["5dd399e8-eb3a-4158-969c-1f5927210a17"]},"title":"Bokeh Application","version":"0.12.15"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('b60559ba-614a-487a-8339-7446332ce2a7').textContent;
+                  var render_items = [{"docid":"ee20286f-68f2-4058-b474-f8d04e0cd71d","elementid":"22fcdfb8-cbfa-484c-8a54-bd7622080d85","modelid":"5dd399e8-eb3a-4158-969c-1f5927210a17"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>
